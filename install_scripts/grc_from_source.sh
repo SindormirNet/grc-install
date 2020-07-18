@@ -86,42 +86,42 @@ SRC_PATH=$INSTALL_PATH/src
 
 # install dependencies
 sudo apt update
-sudo apt -y upgrade
+sudo apt upgrade
 
 # common dependencies
-sudo apt -y install git cmake g++ libboost-all-dev build-essential libtool
-sudo apt -y install automake autoconf libudev-dev doxygen
-sudo apt -y install libusb-dev libusb-1.0-0-dev libusb-1.0-0 
-sudo apt -y install python-setuptools
-sudo apt -y install libfftw3-dev libfftw3-bin libfftw3-doc
-sudo apt -y install libcppunit-dev libcppunit-doc
-sudo apt -y install ncurses-bin
-sudo apt -y install libfontconfig1-dev libxrender-dev libpulse-dev
-sudo apt -y install fort77 ccache libsdl1.2-dev libgsl-dev
-sudo apt -y install wget xterm libcanberra-gtk-module cpufrequtils
-sudo apt -y install libxi-dev r-base-dev liborc-0.4-0 liborc-0.4-dev
-sudo apt -y install libasound2-dev
-sudo apt -y install libzmq3-dev libzmq5
-sudo apt -y install libcomedi-dev
-sudo apt -y install libgps-dev gpsd gpsd-clients
+sudo apt install git cmake g++ libboost-all-dev build-essential libtool
+sudo apt install automake autoconf libudev-dev doxygen
+sudo apt install libusb-dev libusb-1.0-0-dev libusb-1.0-0 
+sudo apt install python-setuptools
+sudo apt install libfftw3-dev libfftw3-bin libfftw3-doc
+sudo apt install libcppunit-dev libcppunit-doc
+sudo apt install ncurses-bin
+sudo apt install libfontconfig1-dev libxrender-dev libpulse-dev
+sudo apt install fort77 ccache libsdl1.2-dev libgsl-dev
+sudo apt install wget xterm libcanberra-gtk-module cpufrequtils
+sudo apt install libxi-dev r-base-dev liborc-0.4-0 liborc-0.4-dev
+sudo apt install libasound2-dev
+sudo apt install libzmq3-dev libzmq5
+sudo apt install libcomedi-dev
+sudo apt install libgps-dev gpsd gpsd-clients
 
 # dependencies for other packages, could be removed for gnuradio-only installs
 if [ $ubuntu_version == "20" ]; then
-	sudo apt -y install libwxgtk3.0-gtk3-dev
+	sudo apt install libwxgtk3.0-gtk3-dev
 else
-	sudo apt -y install libwxgtk3.0-dev
+	sudo apt install libwxgtk3.0-dev
 fi
-sudo apt -y install gnuplot
-sudo apt -y install libfltk1.3-dev
+sudo apt install gnuplot
+sudo apt install libfltk1.3-dev
 
 if [ "$GRC_38" = true ]; then
-	sudo apt -y install libgmp-dev swig python3-numpy python3-mako \
+	sudo apt install libgmp-dev swig python3-numpy python3-mako \
 		python3-sphinx python3-lxml libqwt-qt5-dev \
 		libqt5opengl5-dev python3-pyqt5 liblog4cpp5-dev \
 		python3-yaml python3-click python3-click-plugins python3-zmq \
 		python3-setuptools python3-opengl python3-pip
 else # install the GRC 3.7 dependencies
-	sudo apt -y install python-dev python-mako \
+	sudo apt install python-dev python-mako \
 		python-numpy python-wxgtk3.0 python-sphinx python-cheetah \
 		swig libqt4-opengl-dev python-qt4 libqwt-dev python-pip \
 		python-gtk2 python-lxml pkg-config python-sip-dev \
