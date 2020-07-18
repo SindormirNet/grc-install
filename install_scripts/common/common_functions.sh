@@ -65,8 +65,8 @@ function get_ubuntu_version() {
 	regex_str='Ubuntu\s+([A-Za-z0-9]+)'
 	if [[ ! "$ubuntu_version_str" =~ $regex_str ]]; then
 		echo "ERROR: Not running Ubuntu. Install scripts will require"
-		echo "       manual edits to run. Proceed at your own risk."
-		exit 1
+		echo "       manual edits to run. Proceed at your own risk. Continue?"
+		read J
 	else
 		ubuntu_version=${BASH_REMATCH[1]}
 		if [[ $ubuntu_version == "Focal" ]]; then
